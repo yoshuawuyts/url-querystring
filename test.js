@@ -28,10 +28,10 @@ describe('url-querystring', function() {
 
     var panda = split('sadpanda.com');
     panda.url.should.eql('sadpanda.com');
-    panda.qs.should.eql('');
+    panda.qs.should.eql({});
 
-    var foobar = split('http://foobar.com?')
+    var foobar = split('http://foobar.com?');
     foobar.url.should.eql('http://foobar.com');
-    foobar.qs.should.eql('');
+    foobar.qs.should.eql({});
   });
 });

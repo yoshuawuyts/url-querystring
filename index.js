@@ -28,7 +28,7 @@ function split(url) {
   res.url = nw[0];
   res.qs = nw.length == 2
     ? qs.parse(nw[1])
-    : '';
+    : {};
 
   return res;
 }
