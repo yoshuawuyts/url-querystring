@@ -1,6 +1,6 @@
 {
   "name": "url-querystring",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Split an url into a `qs` and `url` component",
   "main": "index.js",
   "scripts": {
