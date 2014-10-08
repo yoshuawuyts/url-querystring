@@ -21,7 +21,13 @@ module.exports = split;
 function split(url) {
   assert.equal(typeof url, 'string', 'url-querystring: url should be a string');
 
+  var res = {};
   var nw = url.split('?');
-  if (nw.length != 2) return '';
-  return nw[1];
+
+  res.url = nw[0];
+  res.qs = nw.length == 2
+    ? nw[1]
+    : '';
+  
+  return res;
 }

@@ -4,6 +4,8 @@
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Downloads][downloads-image]][downloads-url]
 
+Split an url into a `qs` and `url` component. Prepares it to
+be used by node's native `querystring` module.
 
 ## Installation
 ```bash
@@ -12,12 +14,17 @@ npm install url-querystring
 
 ## Usage
 ```js
+var extract = require('url-querystring');
+var qs = require('querystring');
 
-```
+var res = extract('http://foobar.com/hello?tab=hello&method=something');
+// => '{
+//       url: 'http://foobar.com/hello',
+//       qs: tab=hello&method=something
+//     }'
 
-## API
-```js
-
+qs.parse(res.qs);
+// => {tab: hello, method: something}
 ```
 
 ## License
