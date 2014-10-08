@@ -2,6 +2,7 @@
  * Module dependencies
  */
 
+var qs = require('querystring');
 var assert = require('assert');
 
 /**
@@ -26,8 +27,8 @@ function split(url) {
 
   res.url = nw[0];
   res.qs = nw.length == 2
-    ? nw[1]
+    ? qs.parse(nw[1])
     : '';
-  
+
   return res;
 }

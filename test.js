@@ -19,11 +19,12 @@ describe('url-querystring', function() {
       .should.not.throw('url-querystring: url should be a string');
   });
 
-  it('should get the qs part of a string', function() {
+  it('should get the qs part of a string and unwrap it', function() {
     var gist = split('https://gist.github.com/yoshuawuyts/c33510f7793f46fe5a33?tab=foo&bar=har');
 
     gist.url.should.eql('https://gist.github.com/yoshuawuyts/c33510f7793f46fe5a33');
-    gist.qs.should.eql('tab=foo&bar=har');
+    gist.qs.tab.should.eql('foo');
+    gist.qs.bar.should.eql('har');
 
     var panda = split('sadpanda.com');
     panda.url.should.eql('sadpanda.com');

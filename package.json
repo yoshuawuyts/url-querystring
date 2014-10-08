@@ -1,13 +1,19 @@
 {
   "name": "url-querystring",
   "version": "2.0.0",
-  "description": "",
+  "description": "Split an url into a `qs` and `url` component",
   "main": "index.js",
   "scripts": {
     "test": "make test"
   },
   "repository": "yoshuawuyts/url-querystring",
-  "keywords": [],
+  "keywords": [
+    "url",
+    "querystring",
+    "qs",
+    "split",
+    "unwrap"
+  ],
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
